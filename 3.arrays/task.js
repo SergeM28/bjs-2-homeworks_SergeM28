@@ -8,11 +8,9 @@ result = (arr1.length === arr2.length && arr1.every(function(value, index) {
 
 
   function advancedFilter(arr) {
-    return function(x) {
-      if (x > 0 && x % 3 === 0) {
-        return x * 10;
-      }
-    }
-  }
-   arr = [12, 5, 6, 13, 9];
-  console.log(arr.filter(advancedFilter()).map(advancedFilter()))
+    let result = arr.filter(i=>i>0).filter(i=>i%3===0).map(i=>i*10);
+     return result;
+   }
+   console.log(advancedFilter([-1,6,-9,3]));
+   console.log(advancedFilter([-10,-21,12,123]));
+   console.log(advancedFilter([-1,-2]));
