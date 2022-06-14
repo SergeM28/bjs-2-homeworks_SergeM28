@@ -9,16 +9,16 @@ function getArrayParams(arr) {
     if (arr[i] < min) {
       min = arr[i];
     }
-    else {
+    if (arr[i] > max) {
       max = arr[i];
     }
     sum += arr[i];
     avg = sum / arr.length; 
     
   }
-  return { min: min, max: max, avg: avg= Number(avg.toFixed(2)) };
+  return { min: min, max: max, avg: avg = Number(avg.toFixed(2)) };
 }
-console.log(getArrayParams([1, 2, 3, -100, 10]))
+console.log(getArrayParams([-99, 99, 10]))
 
 
 // Задание 2
